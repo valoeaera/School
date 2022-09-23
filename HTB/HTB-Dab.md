@@ -27,7 +27,7 @@ Once a shell has been obtained through SSH, initial enumeration reveals a few bi
 
 As always, initial enumeration began with a port scan conducted by Nmap. Nmap is an enumeration tool which returns all the open ports on a target host and some information about the services listening on those ports.
 
-![[HTB-pics/dab/01-nmap.png]]
+![nmap](HTB-pics/dab/01-nmap.png)
 
 Four services were returned by Nmap: FTP (21), SSH (22), HTTP (80), and another HTTP (8080). The web pages on 80 and 8080 appeared to both be running on the host itself as the nginx version returned was identical; however, they were hosting different pages. First, FTP was investigated, as Nmap was able to list the contents available for share. This indicated that anonymous login was enabled, which would allow files to be downloaded for further investigation. The JPG file indicated in the Nmap results was downloaded after authenticating to the FTP server with anonymous credentials.
 
