@@ -27,21 +27,21 @@ Once a shell has been obtained through SSH, initial enumeration reveals a few bi
 
 As always, initial enumeration began with a port scan conducted by Nmap. Nmap is an enumeration tool which returns all the open ports on a target host and some information about the services listening on those ports.
 
-![nmap](C:\Users\valoe\Documents\HTB\dab\01-nmap.png)
+![[HTB-pics/dab/01-nmap.png]]
 
 Four services were returned by Nmap: FTP (21), SSH (22), HTTP (80), and another HTTP (8080). The web pages on 80 and 8080 appeared to both be running on the host itself as the nginx version returned was identical; however, they were hosting different pages. First, FTP was investigated, as Nmap was able to list the contents available for share. This indicated that anonymous login was enabled, which would allow files to be downloaded for further investigation. The JPG file indicated in the Nmap results was downloaded after authenticating to the FTP server with anonymous credentials.
 
-![ftp](C:\Users\valoe\Documents\HTB\dab\02-ftp.png)
+![[/HTB-pics/dab/02-ftp.png]]
 
 The file turned out to be a red herring of sorts, as no strings or otherwise hidden data was found in the file and the image was simply a low-resolution image of the [dab](https://www.merriam-webster.com/dictionary/dab) dance move.
 
-![dab](C:\Users\valoe\Documents\HTB\dab\03-dab.png)
+![[HTB-pics/dab/03-dab.png]]
 
 The service that was investigated was the web page available on port 80. Upon visiting the page, a very rudimentary HTML web login page appeared.
 
-![login](C:\Users\valoe\Documents\HTB\dab\04-login.png)
+![[04-login.png]]
 
 Typical easy-win credential pairs were attempted, but proved unsuccessful. Before moving to more noisy investigation methods, the 8080 web page was also inspected. This time, an error message was returned, indicating that a required ‘password’ cookie was not set.
 
-![cookie](C:\Users\valoe\Documents\HTB\dab\05-cookie.png)
+![[05-cookie.png]]
 

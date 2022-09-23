@@ -5,5 +5,7 @@
   "spellcheck": true,
   "rightToLeft": false,
   "showFrontmatter": true,
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "HTB-pics",
+  "newFileLocation": "current"
 }
