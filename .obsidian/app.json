@@ -1,6 +1,6 @@
 {
   "promptDelete": false,
-  "livePreview": false,
+  "livePreview": true,
   "tabSize": 2,
   "spellcheck": true,
   "rightToLeft": false,
