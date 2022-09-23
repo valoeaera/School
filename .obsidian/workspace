@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Criminal-Law/Notes-2022-09-23.md",
+            "file": "Delta-Chi/Chapter-Goals-Fall-2022.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Criminal-Law/Notes-2022-09-23.md",
+                "file": "Delta-Chi/Chapter-Goals-Fall-2022.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Criminal-Law/Notes-2022-09-23.md",
+                "file": "Delta-Chi/Chapter-Goals-Fall-2022.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Criminal-Law/Notes-2022-09-23.md"
+                "file": "Delta-Chi/Chapter-Goals-Fall-2022.md"
               }
             }
           }
@@ -129,5 +129,8 @@
     "collapsed": true
   },
   "active": "d5ad26e3e6ef5e19",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "Criminal-Law/Case-Brief-Template.md",
+    "Criminal-Law/Notes-2022-09-23.md"
+  ]
 }
