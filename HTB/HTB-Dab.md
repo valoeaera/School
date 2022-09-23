@@ -5,13 +5,13 @@ Date: 29 August 2022
 
 ## Table of Contents
 
-| Page Number | Section |
-| - | - |
-| 2 | High-Level Summary |
-| 3 | Service Enumeration |
-| 8 | Initial Foothold |
-| 11 | Privilege Escalation |
-| 14 | Recommendations |
+| Page Number | Section              |
+| ----------- | -------------------- |
+| 2           | High-Level Summary   |
+| 3           | Service Enumeration  |
+| 8           | Initial Foothold     |
+| 11          | Privilege Escalation |
+| 14          | Recommendations      |
 
 ## High-Level Summary
 
