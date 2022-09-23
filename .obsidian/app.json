@@ -1,0 +1,9 @@
+{
+  "promptDelete": false,
+  "livePreview": false,
+  "tabSize": 2,
+  "spellcheck": true,
+  "rightToLeft": false,
+  "showFrontmatter": true,
+  "showUnsupportedFiles": true
+}

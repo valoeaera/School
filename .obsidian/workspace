@@ -1,0 +1,137 @@
+{
+  "main": {
+    "id": "aa887d229c8c81f7",
+    "type": "split",
+    "children": [
+      {
+        "id": "997b26015c986657",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "HTB/HTB-Dab.md",
+            "mode": "source",
+            "source": true
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "51047bac1f570e59",
+    "type": "split",
+    "children": [
+      {
+        "id": "42629bd83171d272",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "be9d57fa38b57aeb",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "d86057484333fd64",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b72b4ebc69836076",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2131ee3d98e930ce",
+    "type": "split",
+    "children": [
+      {
+        "id": "ccc1f6699ab181e6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a008e04150c5c0e2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "HTB/HTB-Dab.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "91d542ab29a393a2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "HTB/HTB-Dab.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0b059571d30b172b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "74aa54a02427c10a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "HTB/HTB-Dab.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "997b26015c986657",
+  "lastOpenFiles": [
+    "Criminal-Law/Case-Brief-Template.md",
+    "HTB/HTB-Dab.md",
+    "Delta-Chi/Chapter-Goals-Fall-2022.md"
+  ]
+}
