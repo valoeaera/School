@@ -1,6 +1,9 @@
 Name: Ben Roudebush
+
 Lab: HTB - Falafel
+
 IP Address: 10.129.1.83
+
 Date: 25 September 2022
 
 ## High-Level Summary
