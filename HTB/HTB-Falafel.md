@@ -266,7 +266,7 @@ I can copy the key and `ssh` as `root`. I could've just read the root flag as `y
 - Unsafe PHP comparison
 	- Use of the `==` operator instead of the `===` operator allowed me to access the administrator account without a valid password.
 - Unsafe filename truncation
-	- Because the truncation program doe snot re-append `.PNG`, I was able to upload PHP code and achieve RCE.
+	- Because the truncation program does not re-append `.PNG`, I was able to upload PHP code and achieve RCE.
 - Password reuse
 	- `moshe`'s  password for SQL was reused as their system password.
 - Password storage
