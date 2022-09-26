@@ -46,7 +46,7 @@ I used BurpSuite to intercept a login request for the port 80 site to see how th
 
 ![request](../HTB-pics/dab/06-request.png)
 
-Now, `wfuzz` can be used to guess the credentials. I assumed `admin` was the username and fed the Dark Web Top 1000 (from SecLists) passwords into `wfuzz`. Normally, you'd run this command twice: once with no `--hx` tag to see what size an invalid credential pair returns, then another time with the appropriate `hx` tag to hide invalid responses. For demonstration purposes, I'll just show the second command here.
+Now, `wfuzz` can be used to guess the credentials. I assumed `admin` was the username and fed the Dark Web Top 1000 passwords (from SecLists) into `wfuzz`. Normally, you'd run this command twice: once with no `--hx` tag to see what size an invalid credential pair returns, then another time with the appropriate `--hx` tag to hide invalid responses. For demonstration purposes, I'll just show the second command here.
 
 ![fuzz](../HTB-pics/dab/07-fuzz.png)
 
@@ -106,7 +106,7 @@ It's basically all of them. I also used the `range` option to test what ports re
 
 ### Memcache
 
-11211 didn't appear on `nmap`. After some research, I discovered it's for a service called `memcache`. This is the caching service I alluded to earlier when talking about the port 80 site. The tools has all sorts of commands you can run to get information about the data in the cache. I intercepted a request in BurpSuite Repeater to enumerate the service more easily. First I ran `stats slabs` to list the available cached data sets.
+11211 didn't appear on `nmap`. After some research, I discovered it's for a service called `memcache`. This is the caching service I alluded to earlier when talking about the port 80 site. The tool has all sorts of commands you can run to get information about the data in the cache. I intercepted a request in BurpSuite Repeater to enumerate the service more easily. First I ran `stats slabs` to list the available cached data sets.
 
 ![stats](../HTB-pics/dab/23-slabs.png)
 
@@ -144,7 +144,7 @@ I then used another `jq` command to find which hash corresponded to `genevieve`.
 
 ![hash](../HTB-pics/dab/31-hash.png)
 
-Now, I can crack this hash with `hashcat`, since it's MD5, it cracks in like 2 minutes.
+Now, I can crack this hash with `hashcat`. Since it's MD5, it cracks in like 2 minutes.
 
 ![crack](../HTB-pics/dab/32-crack.png)
 
@@ -158,7 +158,7 @@ I can log in to `ssh` with `genevieve:Princess1` and obtain the user flag.
 
 ### LinPEAS Enumeration
 
-After I get a shell on a box, the first thing I usually do is run LinPEAS, this is just a way to save time as I *could* run these tests manually, but I have a job and school to do, so instead I use LinPEAS. I set up a Python server to my `tools` directory.
+After I get a shell on a box, the first thing I usually do is run LinPEAS; this is just a way to save time as I *could* run these tests manually, but I have a job and school to do, so instead I use LinPEAS. I set up a Python server to my `tools` directory.
 
 ![python](../HTB-pics/dab/34-python-server.png)
 
@@ -170,7 +170,7 @@ I used `curl` to download the script to the box, set permissions, and run the sc
 
 ![linpeas](../HTB-pics/dab/36-linpeas.png)
 
-The first thing I notice when running LinPEAS (other than the PolKit vulnerability because this box is old) is that there are several unknown SUID binaries and that `ldconfig` has the SUID bit set.
+The first thing I notice when running LinPEAS (other than the PolKit vulnerability because this box is old) is that there are several unknown SUID binaries and that `ldconfig` has the SUID bit set., which means that it executes as `root`.
 
 ![suid](../HTB-pics/dab/38-suid.png)
 
@@ -188,7 +188,7 @@ The main function interested me so I used `pdf`, "print decompiled function", to
 
 ![decomp2](../HTB-pics/dab/41-decompile-2.png)
 
-The password works for the binary, but the login function was just a stub. I then used `ldd` to see what shared objects were needed for `myexec`.
+The password works for the binary, but the login function was just a stub (developer-ese for it being a placeholder). I then used `ldd` to see what shared objects were needed for `myexec`.
 
 ![libseclogin](../HTB-pics/dab/43-ldd.png)
 
@@ -198,15 +198,15 @@ I used the same process of `scp` and `r2` to inspect this file. All the binary d
 
 ![pdf-libsec](../HTB-pics/dab/45-pdf-seclogin.png)
 
-Since `ldconfig` has the SUID bit set, I can check the configuration files. In the configuration directory, there is an unusual `test.conf`.  
+With `ldconfig` , I can check the configuration files. In the configuration directory, there is an unusual `test.conf`.  
 
 ![conf](../HTB-pics/dab/46-ldd-2.png)
 
-It specifies that `ldconfig` looks for libraries in `/tmp` before looking in other directories. I have write access to `/tmp`, so I wrote this simple C code in that directory names `libseclogin.c`.
+It specifies that `ldconfig` looks for libraries in `/tmp` before looking in other directories. I have write access to `/tmp`, so I wrote this simple C code in that directory named `libseclogin.c`. All this code does is set my "effective user id" to `root`, which means that, for all intents and purposes, I am `root`.
 
 ![c-code](../HTB-pics/dab/47-malicious-suid.png)
 
-Then, I compiled the program locally with `gcc` and moved the compiled program to `/tmp`.. Then, I executed `ldconfig` so that `myexec` uses my malicious program instead of the `libseclogin` binary.
+Then, I compiled the program locally with `gcc` and moved the compiled program to `/tmp`. Then, I executed `ldconfig` so that `myexec` uses my malicious program instead of the `libseclogin` binary.
 
 ![compile](../HTB-pics/dab/48-compile.png)
 
