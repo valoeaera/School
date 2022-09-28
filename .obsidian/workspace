@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "HTB/HTB-Falafel.md",
+            "file": "Criminal-Law/Notes-2022-09-26.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB/HTB-Falafel.md",
+                "file": "Criminal-Law/Notes-2022-09-26.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB/HTB-Falafel.md",
+                "file": "Criminal-Law/Notes-2022-09-26.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB/HTB-Falafel.md"
+                "file": "Criminal-Law/Notes-2022-09-26.md"
               }
             }
           }
@@ -130,15 +130,15 @@
   },
   "active": "efa08d3c738c1b17",
   "lastOpenFiles": [
-    "HTB-pics/falafel/47-basically-root.png",
+    "Criminal-Law/Notes-2022-09-23.md",
+    "Criminal-Law/Notes-2022-09-26.md",
     "HTB/HTB-Falafel.md",
+    "HTB-pics/falafel/47-basically-root.png",
     "HTB-pics/falafel/43-yossi-shell.png",
     "HTB-pics/falafel/42-image-manip.png",
     "HTB-pics/falafel/39-file-and-size.png",
     "HTB-pics/falafel/38-video.png",
     "HTB-pics/falafel/37-copy-stuff.png",
-    "HTB-pics/falafel/33-user-flag.png",
-    "HTB-pics/falafel/30-hardcoded-creds.png",
-    "HTB-pics/falafel/27-long-url.png"
+    "HTB-pics/falafel/33-user-flag.png"
   ]
 }
