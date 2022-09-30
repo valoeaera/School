@@ -9,7 +9,19 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Criminal-Law/Notes-2022-09-30.md",
+            "file": "HTB/HTB-Tally.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "c324092df660dc62",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "HTB/HTB-Falafel.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Criminal-Law/Notes-2022-09-30.md",
+                "file": "HTB/HTB-Tally.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Criminal-Law/Notes-2022-09-30.md",
+                "file": "HTB/HTB-Tally.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Criminal-Law/Notes-2022-09-30.md"
+                "file": "HTB/HTB-Tally.md"
               }
             }
           }
@@ -130,13 +142,15 @@
   },
   "active": "997b26015c986657",
   "lastOpenFiles": [
+    "HTB/HTB-Falafel.md",
+    "HTB/HTB-Tally.md",
+    "Criminal-Law/Notes-2022-09-30.md",
+    "HTB-pics/tally/01-nmap.png",
     "Criminal-Law/Notes-2022-09-23.md",
     "HTB/HTB-Dab.md",
-    "HTB/HTB-Falafel.md",
     "HTB-pics/dab/49-root-flag.png",
     "HTB-pics/dab/46-ldd-2.png",
     "HTB-pics/dab/01-nmap.png.md",
-    "Criminal-Law/Case-Brief-Template.md",
-    "Delta-Chi/Chapter-Goals-Fall-2022.md"
+    "Criminal-Law/Case-Brief-Template.md"
   ]
 }
