@@ -1,27 +1,15 @@
 {
   "main": {
-    "id": "aa887d229c8c81f7",
+    "id": "7153dccdd7d29ee4",
     "type": "split",
     "children": [
       {
-        "id": "997b26015c986657",
+        "id": "efa08d3c738c1b17",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "HTB/HTB-Tally.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "c324092df660dc62",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "HTB/HTB-Falafel.md",
+            "file": "Criminal-Law/Notes-2022-10-03.md",
             "mode": "source",
             "source": false
           }
@@ -31,15 +19,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "51047bac1f570e59",
+    "id": "3d338f402f4431f7",
     "type": "split",
     "children": [
       {
-        "id": "42629bd83171d272",
+        "id": "b36d7f587caa7ff6",
         "type": "tabs",
         "children": [
           {
-            "id": "be9d57fa38b57aeb",
+            "id": "8c726f2a513e5025",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -47,7 +35,7 @@
             }
           },
           {
-            "id": "d86057484333fd64",
+            "id": "bc7d9ce1c3d44cec",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -62,7 +50,7 @@
             }
           },
           {
-            "id": "b72b4ebc69836076",
+            "id": "dbb835b275ef5270",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -76,20 +64,20 @@
     "width": 300
   },
   "right": {
-    "id": "2131ee3d98e930ce",
+    "id": "30dde0293146f223",
     "type": "split",
     "children": [
       {
-        "id": "ccc1f6699ab181e6",
+        "id": "2692432b3fb9dc2d",
         "type": "tabs",
         "children": [
           {
-            "id": "a008e04150c5c0e2",
+            "id": "7894b398784c6dda",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB/HTB-Tally.md",
+                "file": "Criminal-Law/Notes-2022-10-03.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,19 +89,19 @@
             }
           },
           {
-            "id": "91d542ab29a393a2",
+            "id": "2257b62252133e5c",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB/HTB-Tally.md",
+                "file": "Criminal-Law/Notes-2022-10-03.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "0b059571d30b172b",
+            "id": "9b37e5368380ace3",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -124,12 +112,12 @@
             }
           },
           {
-            "id": "74aa54a02427c10a",
+            "id": "d5875d10241c5d35",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB/HTB-Tally.md"
+                "file": "Criminal-Law/Notes-2022-10-03.md"
               }
             }
           }
@@ -140,17 +128,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "997b26015c986657",
+  "active": "efa08d3c738c1b17",
   "lastOpenFiles": [
-    "HTB/HTB-Falafel.md",
-    "HTB/HTB-Tally.md",
     "Criminal-Law/Notes-2022-09-30.md",
-    "HTB-pics/tally/01-nmap.png",
+    "Criminal-Law/Notes-2022-10-03.md",
+    "Criminal-Law/Notes-2022-09-28.md",
+    "Criminal-Law/Notes-2022-09-26.md",
     "Criminal-Law/Notes-2022-09-23.md",
-    "HTB/HTB-Dab.md",
-    "HTB-pics/dab/49-root-flag.png",
-    "HTB-pics/dab/46-ldd-2.png",
-    "HTB-pics/dab/01-nmap.png.md",
-    "Criminal-Law/Case-Brief-Template.md"
+    "HTB/HTB-Falafel.md",
+    "HTB-pics/falafel/47-basically-root.png",
+    "HTB-pics/falafel/43-yossi-shell.png",
+    "HTB-pics/falafel/42-image-manip.png",
+    "HTB-pics/falafel/39-file-and-size.png"
   ]
 }
