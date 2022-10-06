@@ -8,7 +8,7 @@ Date: 5 October 2022
 
 ## High-Level Summary
 
-Blackfield is a box that showcases Windows Active Directory enumeration and exploitation. The box starts with AS-REP-roasting to find the `support` user and then crack its password. Bloodhound is then used to discover that another account, `audit2020`, can have its password reset remotely. `audit2020` has access to process memory dumps, including `lsass.exe`. That yields a hash for another account, `svc_backup`, which can login through WinRM. The `svc_backup` account can create backups and this privilege can be used to copy the `ntds.dit` file, which contains all domain account password hashes, including the Administrator account. This can be used to log in through WinRM once again and own the box.
+Blackfield is a fun box that showcases Windows Active Directory enumeration and exploitation. The box starts with AS-REP roasting to find the `support` user and then crack its password. Bloodhound is then used to discover that another account, `audit2020`, can have its password reset remotely. `audit2020` has access to memory dumps, including `lsass`. That yields a hash for another account, `svc_backup`, which can login through WinRM. The `svc_backup` account can create backups and this privilege can be used to copy the `ntds.dit` file, which contains all domain account password hashes, including the Administrator account. This can be used to log in through WinRM once again and own the box.
 
 ## Service Enumeration
 
@@ -16,7 +16,7 @@ Blackfield is a box that showcases Windows Active Directory enumeration and expl
 
 ![](../HTB-pics/blackfield/01.png)
 
-Nmap shows several open ports. Notably, we have `DNS`, `Kerberos`, `LDAP`,  and`RPC`. LDAP especially suggests that this is a Windows Domain Controller. Unfortunately, I happened to be aware that this box *does* have the [Zerologon](https://github.com/SecuraBV/CVE-2020-1472) patch, so no easy wins there.
+Nmap shows several open ports. Notably, we have `DNS`, `Kerberos`, `LDAP`,  and`RPC`. `LDAP` especially suggests that this is a Windows Domain Controller. Unfortunately, I happened to be aware that this box *does* have the [Zerologon](https://github.com/SecuraBV/CVE-2020-1472) patch, so no easy wins there.
 
 ### SMB Enumeration
 
@@ -68,13 +68,14 @@ It cracks very quickly, even in a VM. (I know that's naughty!)
 ![](../HTB-pics/blackfield/12.png)
 
 I can list more users with `rpcclient` , maybe there are more users?
+
 ![](../HTB-pics/blackfield/13.png)
 
 I spent more fun time with `awk` and cleaned up my working directory a little to produce a tidier list of usernames.
 
 ![](../HTB-pics/blackfield/14.png)
 
-But, none of these usernames, other than the three we already had yielded anything. Next I wanted to use `bloodhound` to find interesting privesc paths. To use `bloodhound`, I first need a Bloodhound ingestor to generate the .JSON files that `bloodhound` can query. Luckily, [this](https://github.com/fox-it/BloodHound.py) one exists for Kali.
+But none of these usernames, other than the three we already had, yielded anything. Next I wanted to use `bloodhound` to find interesting privesc paths. To use `bloodhound`, I first need a Bloodhound ingestor to generate the .JSON files that `bloodhound` can query. Luckily, [this](https://github.com/fox-it/BloodHound.py) one exists for Kali.
 
 ![](../HTB-pics/blackfield/15.png)
 
@@ -102,7 +103,7 @@ If I find the support account using the search bar on the right and then go to "
 
 ![](../HTB-pics/blackfield/22.png)
 
-If I use the `setuserinfo2` command, I can set `audit2020`'s password. The `23` option comes from [this](https://room362.com/post/2017/reset-ad-user-password-with-linux/) blog and the password must have a capital letter, a lowercase letter, and a special character.
+If I use the `setuserinfo2` command, I can set `audit2020`'s password. The `23` option comes from [this](https://room362.com/post/2017/reset-ad-user-password-with-linux/) blog and the password must have a capital letter, a lowercase letter, and a special character but can be anything that fits those criteria. I used my username with an exclamation point.
 
 ![](../HTB-pics/blackfield/23.png)
 
