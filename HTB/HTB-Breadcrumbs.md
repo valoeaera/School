@@ -438,21 +438,29 @@ I can log in via `SSH` as `administrator` with the same options as the `juliette
 ![](../HTB-pics/breadcrumbs/78.png)
 ![](../HTB-pics/breadcrumbs/79.png)
 
-## Vulnerability Summary
+## Recommendations
 
 - Local File Read
 	- The request that reads the content of the book summaries has no input validation for which file to read. This allows the attacker to read the source code of the website.
-	- Reading the source code discloses both the method by which the admin token is generated and the secret key for generating the `JWT`.
+		- This can be done in a number of ways, but PHP's `realpath()` function is an elegant way to disallow absolute paths without allowing escape sequences.
+		- Reading the source code discloses both the method by which the admin token is generated and the secret key for generating the `JWT`.
 - Non-random `PHPSESSID` Generation
 	- The method by which the `PHPSESSID` is generated is not sufficiently random and allows this value to be easily guessed.
+		- PHP has the built-in `session_start()` and `session_regenerate_id()` commands which generate sufficiently random `PHPSESSID` values.
 - Too long `PHPSESSID`lifespan
 	- The generated `PHPSESSID` is valid for up to a week. This is too long and allows anyone with knowledge of the token to reuse it.
+		- If the aforementioned `session_start()` is used, `session_set_cookie_params()` can be used to se the lifetime of the session.
 - Lax Windows Defender protection
 	- The webshell was able to be obfuscated enough to circumvent Windows Defender simply by changing the function used.
-	- It is important to use the latest updates so as to have the most robust Windows Defender detection available, among other reasons.
+		- It is important to use the latest updates so as to have the most robust Windows Defender detection available, among other reasons.
 - Hardcoded & Insufficient Credentials
 	- `juliette`'s `SSH` password was stored in plaintext in a JSON file in the webpage's (publicly accessible) directory.
+		- This should at lest be moved from the web directory to prevent unauthorized viewing. More thorough fuzzing than that done in this report could have circumvented the entirety of the `Initial Foothold` section.
+		- If the application using it is disabled, this file should be sanitized.
 	- `development`'s `SMB` password was stored in plaintext in a sticky note.
+		- This issue is already being addressed by the move to the `Krypter_Linux` program.
 	- The `Krypter_Linux` program did not adequately ensure the master key was correct before allowing the administrator's AES key to be read.
+		- This can be solved by using Linux ["best-practices"](https://stackoverflow.com/questions/6536994/authentication-of-local-unix-user-using-c) for authentication.
 - SQL injection
 	- The `Krypter_Linux` query was vulnerable to SQL injection despite SQL injection being patched on the Library Search (learned from the leaked source).
+		- This can be fixed using "parameterized statements" as the Library Search already does.
