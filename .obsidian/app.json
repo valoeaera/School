@@ -7,5 +7,6 @@
   "showFrontmatter": true,
   "showUnsupportedFiles": true,
   "attachmentFolderPath": "HTB-pics",
-  "newFileLocation": "current"
+  "newFileLocation": "current",
+  "readableLineLength": false
 }
