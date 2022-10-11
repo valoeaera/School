@@ -449,13 +449,13 @@ I can log in via `SSH` as `administrator` with the same options as the `juliette
 		- PHP has the built-in `session_start()` and `session_regenerate_id()` commands which generate sufficiently random `PHPSESSID` values.
 - Too long `PHPSESSID`lifespan
 	- The generated `PHPSESSID` is valid for up to a week. This is too long and allows anyone with knowledge of the token to reuse it.
-		- If the aforementioned `session_start()` is used, `session_set_cookie_params()` can be used to se the lifetime of the session.
+		- If the aforementioned `session_start()` is used, `session_set_cookie_params()` can be used to set the lifetime of the session.
 - Lax Windows Defender protection
 	- The webshell was able to be obfuscated enough to circumvent Windows Defender simply by changing the function used.
 		- It is important to use the latest updates so as to have the most robust Windows Defender detection available, among other reasons.
 - Hardcoded & Insufficient Credentials
 	- `juliette`'s `SSH` password was stored in plaintext in a JSON file in the webpage's (publicly accessible) directory.
-		- This should at lest be moved from the web directory to prevent unauthorized viewing. More thorough fuzzing than that done in this report could have circumvented the entirety of the `Initial Foothold` section.
+		- This should at least be moved from the web directory to prevent unauthorized viewing. More thorough fuzzing than that done in this report could have circumvented the entirety of the `Initial Foothold` section.
 		- If the application using it is disabled, this file should be sanitized.
 	- `development`'s `SMB` password was stored in plaintext in a sticky note.
 		- This issue is already being addressed by the move to the `Krypter_Linux` program.
