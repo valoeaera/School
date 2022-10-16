@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "510eee42863d1790",
+        "id": "32282e4fb54d844e",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "HTB/HTB-Breadcrumbs.md",
+            "file": "Criminal-Law/Notes-2022-10-14.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB/HTB-Breadcrumbs.md",
+                "file": "Criminal-Law/Notes-2022-10-14.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB/HTB-Breadcrumbs.md",
+                "file": "Criminal-Law/Notes-2022-10-14.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,28 +117,37 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB/HTB-Breadcrumbs.md"
+                "file": "Criminal-Law/Notes-2022-10-14.md"
               }
             }
+          },
+          {
+            "id": "2a27fda1cc48f62e",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
-  "active": "510eee42863d1790",
+  "active": "32282e4fb54d844e",
   "lastOpenFiles": [
+    "Criminal-Law/Notes-2022-10-12.md",
+    "Criminal-Law/Notes-2022-10-10.md",
+    "HTB/HTB-Breadcrumbs.md",
     "Criminal-Law/Notes-2022-10-03.md",
     "Criminal-Law/Notes-2022-09-30.md",
     "Criminal-Law/Notes-2022-09-28.md",
     "Criminal-Law/Notes-2022-09-26.md",
     "Criminal-Law/Notes-2022-09-23.md",
     "HTB/HTB-Tally.md",
-    "HTB/HTB-Falafel.md",
-    "HTB-pics/tally/01-nmap.png",
-    "HTB/HTB-Dab.md",
-    "HTB-pics/dab/49-root-flag.png"
+    "HTB/HTB-Falafel.md"
   ]
 }
