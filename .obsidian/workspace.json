@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "be52fc4047aa93f3",
+        "id": "13b27948c150d394",
         "type": "tabs",
         "children": [
           {
-            "id": "ac5102f2afa8bf42",
+            "id": "b9ab74e211e8c287",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Criminal-Law/Notes-2022-10-24.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b4a04f0820af61d3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Criminal-Law/Notes-2022-10-26.md",
+                "file": "HTB/HTB-Mantis.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Criminal-Law/Notes-2022-10-26.md",
+                "file": "HTB/HTB-Mantis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Criminal-Law/Notes-2022-10-26.md",
+                "file": "HTB/HTB-Mantis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Criminal-Law/Notes-2022-10-26.md"
+                "file": "HTB/HTB-Mantis.md"
               }
             }
           },
@@ -158,20 +145,17 @@
     "width": 300,
     "collapsed": true
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "b4a04f0820af61d3",
+  "active": "b9ab74e211e8c287",
   "lastOpenFiles": [
+    "HTB/HTB-Control.md",
+    "HTB/HTB-Mantis.md",
     "Criminal-Law/Notes-2022-10-24.md",
+    "Criminal-Law/Notes-2022-10-26.md",
     "Criminal-Law/Notes-2022-10-19.md",
     "Criminal-Law/Case-Brief-Template.md",
     "Criminal-Law/Notes-2022-10-12.md",
     "Criminal-Law/Notes-2022-10-10.md",
     "HTB/HTB-Breadcrumbs.md",
-    "Criminal-Law/Notes-2022-10-03.md",
-    "Criminal-Law/Notes-2022-09-30.md",
-    "Criminal-Law/Notes-2022-09-28.md",
-    "Criminal-Law/Notes-2022-09-26.md"
+    "Criminal-Law/Notes-2022-10-03.md"
   ]
 }

@@ -1,6 +1,7 @@
 {
   "translucency": false,
-  "cssTheme": "Primary",
+  "cssTheme": "",
   "baseFontSize": 16,
-  "accentColor": ""
+  "accentColor": "#dc98c3",
+  "baseFontSizeAction": true
 }
