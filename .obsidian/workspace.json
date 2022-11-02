@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "13b27948c150d394",
+        "id": "de7e17060ab39773",
         "type": "tabs",
         "children": [
           {
-            "id": "b9ab74e211e8c287",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HTB/HTB-Mantis.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0ec7dcd18e66b0a4",
+            "id": "e3e443451037e7b3",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -158,17 +145,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "0ec7dcd18e66b0a4",
+  "active": "e3e443451037e7b3",
   "lastOpenFiles": [
+    "HTB/().md",
+    "HTB/HTB-Fuse.md",
+    "HTB/HTB-Blackfield.md",
     "HTB/HTB-Mantis.md",
+    "HTB/Untitled.md",
     "HTB/HTB-Control.md",
     "Criminal-Law/Notes-2022-10-24.md",
     "Criminal-Law/Notes-2022-10-26.md",
     "Criminal-Law/Notes-2022-10-19.md",
-    "Criminal-Law/Case-Brief-Template.md",
-    "Criminal-Law/Notes-2022-10-12.md",
-    "Criminal-Law/Notes-2022-10-10.md",
-    "HTB/HTB-Breadcrumbs.md",
-    "Criminal-Law/Notes-2022-10-03.md"
+    "Criminal-Law/Case-Brief-Template.md"
   ]
 }
