@@ -108,14 +108,70 @@ WinPEAS doesn't mark it red, but under `Users`, I can see that I have the `SeLoa
 I need a few files to execute this exploit. What's more, I need to compile a lot of them on Windows, so I'll need to build all the files I need and send them over to Linux. Here's a list of links to the files I'm using:
 
 - [EoPLoadDriver](https://github.com/TarlogicSecurity/EoPLoadDriver/): Loads the malicious Capcom.sys into the installed drivers
-- [Capcom.sys](https://github.com/FuzzySecurity/Capcom-Rootkit/blob/master/Driver/Capcom.sys): 
-- 
+- [Capcom.sys](https://github.com/FuzzySecurity/Capcom-Rootkit/blob/master/Driver/Capcom.sys): The malicious driver we'll be installing
+- [ExploitCapcom](https://github.com/tandasat/ExploitCapcom): Uses Capcom.sys to execute a binary, in this case, we'll be generating a reverse shell payload with MSFVenom.
 
 ![](../HTB-pics/fuse/21.png)
 
+#### Compiling Some Binaries
+
+In MS Visual Studio, we'll make a blank new C++ project.
+
+![](../HTB-pics/fuse/23.png)
+
+Then, I copied-and-pasted the code from `EoPLoadDriver.cpp` in the Git repository into the new `EoPLoadDriver` in my project. I could have also just deleted the new blank file and moved the old one into its place. Then, I changed the selector in the ribbon to "Release" and "x64" and selected "Build -> Start Build" from the menu to build the binary.
+
+![](../HTB-pics/fuse/24.png)
+
+`ExploitCapcom` is already a Visual Studio project, so I can just open it.
+
+![](../HTB-pics/fuse/25.png)
+
+Now, you'll need to edit the `LaunchShell()` function to point to what will be my reverse shell payload instead of `cmd.exe`. I'll build this project with the same options as `EoPLoadDriver`.
+
+![](../HTB-pics/fuse/26.png)
+
+#### Generating a Reverse Shell Payload
+
+Back on Kali, I can use MSFVenom to create that payload that `ExploitCapcom` points to.
+
+![](../HTB-pics/fuse/27.png)
+
+I also zipped up a folder containing all three of the files from Windows to send it over to Kali. Now I have all the tools I'll need to exploit the target.
+
+![](../HTB-pics/fuse/28.png)
+
+#### Exploitation, Shell as `SYSTEM`
+
+I first start a `nc` listener for my payload to hit against in a new terminal tab.
+
+![](../HTB-pics/fuse/29.png)
+
+On my WinRM shell, I can use `upload` to simply upload each file to the target. Now all of the tools are on the target.
+
+![](../HTB-pics/fuse/30.png)
+
+I'll use `EoPLoadDriver` to load `Capcom.sys`. `NTSTATUS: 00000000` means that the service is running.
+
+![](../HTB-pics/fuse/31.png)
+
+Then, I'll use `ExploitCapom` to run `valoe.exe` with `Capcom.sys`.
+
+![](../HTB-pics/fuse/32.png)
+
+And I get a `SYSTEM` shell on my listener and can grab the root flag.
+
+![](../HTB-pics/fuse/33.png)
+
 ## Recommendations
 
+- Insufficient Password
+	- The `tlavel` user's password was easily guessable (`hashcat` generates it as one of the first options when fed the name of the domain) and was even used as a filename for a job in the print queue. This is not `sthompson`, the user who submitted the job in question, at fault, but it is evidence of its insecurity
+	- It is my recommendation that this user be required to change their password and a stricter password policy be implemented to prevent easily guessable passwords from being used.
+- Remote Password Reset
+	- I was able to reset `tlavel`'s password remotely, even though I only had the expired password. This is because of an SMB misconfiguration. The method I used in my exploitation requires that anonymous access to the `$IPC` share be available.
+	- It is my recommendation that this, along with any other anonymous SMB access, should be disabled.
+- Reused & Plaintext Password
+	- The service account's password was both reused (also used as the password for scan2docs) and stored in plaintext in the printer description. With Windows service accounts, it is very important to harden and ensure the security of these accounts as they inherently have access to sensitive system functions, like installing device drivers. Any attacker with access to one of these accounts is often times only a couple steps removed from full system control.
+	- It is my recommendation that this password be removed from the description and one (or preferably both) of the passwords be changed to avoid reuse in this way.
 
-
-
-https://github.com/tandasat/ExploitCapcom
