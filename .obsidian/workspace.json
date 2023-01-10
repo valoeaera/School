@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Criminal-Law/Notes-2022-12-02.md",
+                "file": "Delta-Chi/Kassi-1-on-1.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Criminal-Law/Notes-2022-12-02.md",
+                "file": "Delta-Chi/Kassi-1-on-1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Criminal-Law/Notes-2022-12-02.md",
+                "file": "Delta-Chi/Kassi-1-on-1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Criminal-Law/Notes-2022-12-02.md"
+                "file": "Delta-Chi/Kassi-1-on-1.md"
               }
             }
           },
@@ -145,8 +145,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "4942c53fe5af938b",
+  "active": "be9d57fa38b57aeb",
   "lastOpenFiles": [
+    "Criminal-Law/Notes-2022-12-02.md",
     "Criminal-Law/Notes-2022-11-28.md",
     "Criminal-Law/Notes-2022-11-21.md",
     "Criminal-Law/Notes-2022-11-18.md",
@@ -155,7 +156,6 @@
     "Criminal-Law/Notes-2022-11-11.md",
     "HTB/HTB-Bighead.md",
     "HTB/HTB-Fuse.md",
-    "HTB/HTB-Blackfield.md",
-    "HTB/HTB-Falafel.md"
+    "HTB/HTB-Blackfield.md"
   ]
 }
