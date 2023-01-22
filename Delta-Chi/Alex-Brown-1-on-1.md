@@ -1,10 +1,41 @@
 ## Professional Development
 - Delta Chi Mentorship Network
+    - lots of uses
+    - AMs take part!
+    - alumni take part
+    - resource repository
+    - job board (building out)
 - Dale Carnegie
+    - one scholar per chapter, but there is a waitlist for additional members
+        - encourage nominating extras for the waitlist
+    - same course delivered across the globe
+        - same accreditation
+        - credit goes to communications
+    - at RLC
+        - keynote dale carnegie for everyone
+        - 4 additional courses/sessions offered for everyone
+            - working on finalization
 - Education Resources
+    - zoom meeting presentations from Alex Brown
+    - delta chi linked in and facebook group
 
 ## Diversity, Equity, and Inclusion
 - Chapter Climate Survey?
+    - Actually in the works right now
+    - covers more than just DE&I, more of a broad-spectrum survey (Diad?)
 - LGBTQ+ Resources
 - Racial Equality Resources
 - Education Resources
+    - Rolling out Plaid content on LMS
+        - Starts with just DE&I chairs having access
+        - Alex's goal is to have anyone be able to talk
+    - Presentations from on-campus resources
+    - Events for MSO & GSAN
+    - Sit in on other committee meetings
+    - IHQ DE&I Committee
+    - Convention changes
+        - "colony" removed
+        - DE&I standing committee
+            - same as below
+        - Delta Chi Pride - get in there and start a convo
+            - also potential for chapter calls
